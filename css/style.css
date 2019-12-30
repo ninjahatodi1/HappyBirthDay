@@ -73,6 +73,26 @@ h1.newyear {
 	margin-bottom: 1.5rem;
 }
 
+.celbtn{
+	display: inline-block;
+	padding: 0.7rem 1.4rem;
+	color: black;
+	font-size: 1.3rem;
+	font-weight: bold;
+	background-color: wheat;
+	border-radius: 5px;
+	text-decoration: none;
+	z-index: 2;
+	box-shadow: 0.3rem 0.3rem 0.3rem #333;
+	border: 1px solid #333;
+	cursor: pointer;
+	margin: 0 ;
+}
+
+.celbtn:hover{
+	 background-color: burlywood;
+}
+
 
 .time small {
 	color: rgb(177, 172, 172);
@@ -112,6 +132,10 @@ h1.newyear {
 	.h1 {
 		font-size: 2rem;
 		margin-bottom: 2rem;
+	}
+
+	h1.newyear{
+		 font-size: 6rem;
 	}
 
 }
