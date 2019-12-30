@@ -26,13 +26,13 @@ function animateInnerText() {
 
 
 const callUpdateCount = setInterval(updateCountdown, 1000);
-const callcreateAnimateEl = setInterval(createAnimateEl, 10);
+const callcreateAnimateEl = setInterval(createAnimateEl, 50);
 
 function createAnimateEl() {
   const animateEl = document.createElement('p');
   animateEl.innerText = animateInnerText();
   animateEl.classList.add('animate');
-	animateEl.style.fontSize = Math.random() * 10 + 10 + 'px';
+  animateEl.style.fontSize = Math.random() * 10 + 10 + 'px';
   animateEl.style.top = Math.random() * innerHeight + "px";
   animateEl.style.left = Math.random() * innerWidth + "px";
   document.body.appendChild(animateEl);
@@ -42,12 +42,13 @@ function createAnimateEl() {
   }, 4000)
 }
 
-function showMessage() {  
+function showMessage() {
   msg = 'Happy Birthday Battery 🎂';
   let call = setInterval(callMessage, 100);
   let index = 0;
   function callMessage() {
-    document.body.innerHTML = `<h1 class="newyear">${msg.slice(0, index)}</h1>`;
+    document.body.innerHTML = `<h1 class="newyear">${msg.slice(0, index)}</h1>
+    <a class="celbtn" href="https://ninjahatodi1.github.io/hbd/">Let's Celebrate 🎉</a>`;
     index++;
     if (index > msg.length)
       clearInterval(call);
@@ -60,10 +61,10 @@ function updateCountdown() {
 
   if (diff < 0) {
     newYear = 1;
-    document.title = "Happy BirthDay Battery🤓!!";    
+    document.title = "Happy BirthDay Battery 🤓!!";
     clearInterval(callUpdateCount);
     showMessage();
-    setInterval(createSnowFlake, 10);    
+    setInterval(createSnowFlake, 10);
   } else {
     newYear = 0;
     const days = Math.floor(diff / 1000 / 60 / 60 / 24);
@@ -80,17 +81,17 @@ function updateCountdown() {
 
 
 function createSnowFlake() {
-	const snow_flake = document.createElement('i');
-	snow_flake.classList.add('fas');
-	snow_flake.classList.add('fa-snowflake');
-	snow_flake.style.left = Math.random() * window.innerWidth + 'px';
-	snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's';
-	snow_flake.style.opacity = Math.random();
-	snow_flake.style.fontSize = Math.random() * 10 + 10 + 'px';
-	
-	document.body.appendChild(snow_flake);
-	
-	setTimeout(() => {
-		snow_flake.remove();
-	}, 5000)
+  const snow_flake = document.createElement('i');
+  snow_flake.classList.add('fas');
+  snow_flake.classList.add('fa-snowflake');
+  snow_flake.style.left = Math.random() * window.innerWidth + 'px';
+  snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's';
+  snow_flake.style.opacity = Math.random();
+  snow_flake.style.fontSize = Math.random() * 10 + 10 + 'px';
+
+  document.body.appendChild(snow_flake);
+
+  setTimeout(() => {
+    snow_flake.remove();
+  }, 5000)
 }
