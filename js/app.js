@@ -1,5 +1,5 @@
 const body = document.body;
-const endTime = new Date('December 31 2019 23:59:59');
+const endTime = new Date('May 18 2022 23:59:59');
 const daysEl = document.getElementById('days');
 const hoursEl = document.getElementById('hours');
 const minutesEl = document.getElementById('minutes');
@@ -19,9 +19,9 @@ function changeBG() {
 
 function animateInnerText() {
   if (newYear === 1)
-    return `Happy Birthday 🤓!!`;
+    return `Happy Birthday !!`;
   else
-    return `Battery 🤓`;
+    return `Raveen `;
 }
 
 
@@ -43,7 +43,7 @@ function createAnimateEl() {
 }
 
 function showMessage() {
-  msg = 'Happy Birthday Battery 🎂';
+  msg = 'Happy Birthday Raveen 🎂';
   let call = setInterval(callMessage, 100);
   let index = 0;
   function callMessage() {
@@ -61,7 +61,7 @@ function updateCountdown() {
 
   if (diff < 0) {
     newYear = 1;
-    document.title = "Happy BirthDay Battery 🤓!!";
+    document.title = "Happy BirthDay Raveen !!";
     clearInterval(callUpdateCount);
     showMessage();
     setInterval(createSnowFlake, 10);
