@@ -21,7 +21,7 @@ function animateInnerText() {
   if (newYear === 1)
     return `Happy Birthday !!`;
   else
-    return `Sarah`;
+    return `Yoi`;
 }
 
 
@@ -43,7 +43,7 @@ function createAnimateEl() {
 }
 
 function showMessage() {
-  msg = 'Happy Birthday Sarah 🎂';
+  msg = 'Happy Birthday Yoi 🎂';
   let call = setInterval(callMessage, 100);
   let index = 0;
   function callMessage() {
@@ -61,7 +61,7 @@ function updateCountdown() {
 
   if (diff < 0) {
     newYear = 1;
-    document.title = "Happy BirthDay Sarah !!";
+    document.title = "Happy BirthDay Yoi !!";
     clearInterval(callUpdateCount);
     showMessage();
     setInterval(createSnowFlake, 10);
